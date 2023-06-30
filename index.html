@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="funciones.js"></script>
+</head>
+<body onload="mostrarFecha(); mostrarArreglo()">
+    <div id="container">
+        <header>
+            <h1>Ejercicios aplicados con JavaScript</h1>
+        </header>
+
+        <main id="contenido">
+            <h2>Cita médica</h2>
+            <p id="paciente">Paciente: Juanito Mora</p>
+            <button id="botonPaciente" onclick="cambiarPaciente()">Siguiente Paciente</button>
+
+            <p id="fechaActual"></p>
+            <button onclick="convertirMayusculas()">Resaltar Fecha</button>
+
+            <div id="VerificarEdad">
+                <h3>Inserte su edad</h3>
+                <input type="edad" id="edad">
+                <button id="botonEdad" onclick="verificarEdad()">Verificar</button>
+            </div>
+
+            <div id="cita">
+                <h3>Escoja el día de su cita</h3>
+                <button id="lunes" onclick="diaSemana('0')">Lunes</button>
+                <button id="martes"  onclick="diaSemana('1')">Martes</button>
+                <button id="miercoles" onclick="diaSemana('2')">Miércoles</button>
+                <button id="jueves" onclick="diaSemana('3')">Jueves</button>
+                <button id="viernes" onclick="diaSemana('4')">Viernes</button>
+                <button id="sabado" onclick="diaSemana('5')">Sábado</button>
+                <button id="domingo" onclick="diaSemana('6')">Domingo</button>
+            </div>
+
+            <div id="Abono">
+                <h3>Deposite un monto voluntario para la clínica</h3>
+                <p id="total">0₡</p>
+                <input type="montoAbono" id="montoAbono">
+                <button id="botonAbono" onclick="abonar()">Abonar</button>
+                <button id="reset" onclick="reset()">Anular Abono</button>
+            </div>
+            
+            <div id="alegias">
+                <h3>Alergias Registradas:</h3>
+                <p id="output"></p>
+                <input type="text" id="inputText">
+                <button onclick="agregarElemento()">Agregar</button>
+                <button onclick="eliminarElemento()">Eliminar</button>
+            </div>
+
+            <div id="ConfirmarCita">
+                <p class="mensaje" id="mensaje">---</p>
+                <button onclick="iniciarContador()">Confirmar Cita</button>
+            </div>  
+
+            <img class="logo" src="logo.png" alt="Clinica">
+        </main>
+    </div>
+    <article class="pie">
+        <footer class="pie">
+            <div class="footer-content">
+              <p>Autor: Isaac S. Alvarado</p>
+              <p>Tarea 6 Diseño Web</p>
+              <p>&copy; 2023 Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </article>
+</body>
+</html>
